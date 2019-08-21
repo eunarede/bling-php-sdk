@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "3d199d17-41ed-4074-9714-b05319cb9ea5",
+		"name": "Bling NFS-e",
+		"description": "Padronização para envio de dados de notas fiscais",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Contatos",
+			"item": [
+				{
+					"name": "Lista Contatos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://bling.com.br/Api/v2/contatos/json/?apikey={{apikey}}",
+							"protocol": "https",
+							"host": [
+								"bling",
+								"com",
+								"br"
+							],
+							"path": [
+								"Api",
+								"v2",
+								"contatos",
+								"json",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								}
+							]
+						},
+						"description": "Lista todos os contatos"
+					},
+					"response": []
+				},
+				{
+					"name": "Contato",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://bling.com.br/Api/v2/contato/09529192000100/json/?apikey={{apikey}}",
+							"protocol": "https",
+							"host": [
+								"bling",
+								"com",
+								"br"
+							],
+							"path": [
+								"Api",
+								"v2",
+								"contato",
+								"09529192000100",
+								"json",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cria Contato",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://bling.com.br/Api/v2/contato/json/?apikey={{apikey}}&xml=<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<contato>\n    <nome>Contato Teste</nome>\n    <fantasia>CT</fantasia>\n    <tipoPessoa>F</tipoPessoa>\n    <contribuinte>9</contribuinte>\n    <cpf_cnpj>999.999.999-99</cpf_cnpj>\n    <ie_rg>999/9999999</ie_rg>\n    <endereco>Rua Visconde de São Gabriel</endereco>\n    <numero>123</numero>\n    <complemento>Sala 123</complemento>\n    <bairro>Centro</bairro>\n    <cep>95.700-000</cep>\n    <cidade>Bento Gonçalves</cidade>\n    <uf>RS</uf>\n    <fone>(99) 9999-9999</fone>\n    <celular>(99) 99999-9999</celular>\n    <email>teste@mail.com.br</email>\n    <tipos_contatos>\n        <tipo_contato>\n             <descricao>Transportador</descricao>\n        </tipo_contato>\n        <tipo_contato>\n             <descricao>Fornecedor</descricao>\n        </tipo_contato>\n    </tipos_contatos>\n</contato>",
+							"protocol": "https",
+							"host": [
+								"bling",
+								"com",
+								"br"
+							],
+							"path": [
+								"Api",
+								"v2",
+								"contato",
+								"json",
+								""
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "{{apikey}}"
+								},
+								{
+									"key": "xml",
+									"value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<contato>\n    <nome>Contato Teste</nome>\n    <fantasia>CT</fantasia>\n    <tipoPessoa>F</tipoPessoa>\n    <contribuinte>9</contribuinte>\n    <cpf_cnpj>999.999.999-99</cpf_cnpj>\n    <ie_rg>999/9999999</ie_rg>\n    <endereco>Rua Visconde de São Gabriel</endereco>\n    <numero>123</numero>\n    <complemento>Sala 123</complemento>\n    <bairro>Centro</bairro>\n    <cep>95.700-000</cep>\n    <cidade>Bento Gonçalves</cidade>\n    <uf>RS</uf>\n    <fone>(99) 9999-9999</fone>\n    <celular>(99) 99999-9999</celular>\n    <email>teste@mail.com.br</email>\n    <tipos_contatos>\n        <tipo_contato>\n             <descricao>Transportador</descricao>\n        </tipo_contato>\n        <tipo_contato>\n             <descricao>Fornecedor</descricao>\n        </tipo_contato>\n    </tipos_contatos>\n</contato>"
+								}
+							]
+						},
+						"description": "Criar contato https://manuais.bling.com.br/api/?item=contatos#POSTcontato"
+					},
+					"response": []
+				}
+			],
+			"description": "Cadastramento de contatos (clientes)"
+		},
+		{
+			"name": "GET produtos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://bling.com.br/Api/v2/produtos/?apikey={{apikey}}",
+					"protocol": "https",
+					"host": [
+						"bling",
+						"com",
+						"br"
+					],
+					"path": [
+						"Api",
+						"v2",
+						"produtos",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{apikey}}"
+						}
+					]
+				},
+				"description": "Lista os produtos cadastrados no BLIG ( formato JSon )"
+			},
+			"response": []
+		},
+		{
+			"name": "POST notaservico",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "xml",
+							"value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<pedido>\n    08/03/2018\n    <cliente>\n        <nome>EunaRede</nome>\n        <cnpj>09.529.192/0001-00</cnpj>\n        <ie></ie>\n        <endereco>Av Monteiro Tourinho</endereco>\n        <numero>261</numero>\n        <complemento>Sala 1</complemento>\n        <bairro>Bacacheri</bairro>\n        <cep>82.600-000</cep>\n        <cidade>Curitiba</cidade>\n        <uf>PR</uf>\n        <fone>41 3618-9008</fone>\n        <email>eunarede.bling@dev.eunarede.com</email>\n    </cliente>\n    <servicos>\n        <servico>\n            <codigo>1234</codigo>\n            <descricao>Desenvolvimento de site</descricao>\n            <valor>586542,33</valor>\n        </servico>\n    </servicos>\n    <parcelas>\n        <parcela>\n            <dias>1</dias>\n            <vlr>586542,33</vlr>\n            <obs>Parcela 1</obs>\n        </parcela>\n    </parcelas>\n</pedido>",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://bling.com.br/Api/v2/notaservico/?apikey={{apikey}}",
+					"protocol": "https",
+					"host": [
+						"bling",
+						"com",
+						"br"
+					],
+					"path": [
+						"Api",
+						"v2",
+						"notaservico",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{apikey}}"
+						}
+					]
+				},
+				"description": "Gera uma nota fiscal"
+			},
+			"response": []
+		},
+		{
+			"name": "GET notaservico",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://bling.com.br/Api/v2/notaservico/000090/?apikey={{apikey}}",
+					"protocol": "https",
+					"host": [
+						"bling",
+						"com",
+						"br"
+					],
+					"path": [
+						"Api",
+						"v2",
+						"notaservico",
+						"000090",
+						""
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{apikey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5aed90e2-bcea-4081-8ff0-9be7ae45428a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8d16ae3b-d6ae-4762-8884-8e4e98957263",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7037b681-08b7-4c62-9b4d-dc08f2ae8751",
+			"key": "apikey",
+			"value": "4b8f6d0ace76749833373e55a01cee1022f65d8dd8e0819cab01371c5757b01b71195e9e",
+			"type": "string"
+		}
+	]
+}

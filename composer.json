@@ -1,0 +1,31 @@
+{
+    "name": "eunarede/bling-php-sdk",
+    "description": "SDK PHP para Bling ERP",
+    "type": "library",
+    "require": {
+      "php": ">=5.5",
+      "ext-curl": "*",
+      "ext-json": "*",
+      "psr/log": "^1.1",
+      "guzzlehttp/guzzle": ">=6.2",
+      "italodeveloper/guzzle-zend": "^1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "phpdocumentor/phpdocumentor": "^2.9",
+        "zendframework/zend-http": ">=2.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andre Bellafronte",
+            "email": "andre@eunarede.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "Bling\\": "src/"
+      }
+    },
+    "minimum-stability": "stable"
+}
