@@ -1,5 +1,5 @@
 <?php
-namespace Zoop\Core;
+namespace Bling\Core;
 
 /**
  * Config class
@@ -9,22 +9,20 @@ namespace Zoop\Core;
  * formas simples de usabilidade, podendo substituir por exemplo
  * o guzzle e suas configuração de timeout pelo Zend Http.
  *
- * @method Zoop/Core/Config::configure(string $token, string $marketplace, string $vendedor)
+ * @method Bling/Core/Config::configure(string $token, string $marketplace, string $vendedor)
  *
- * @package Zoop/Core
+ * @package Bling/Core
  * @author italodeveloper <italoaraujo788@gmail.com>
  * @version 1.0.0
  */
 class Config
 {
-    public static function configure($token, $marketplace, $vendedor, $is_zend = null)
+    public static function configure($token, $is_zend = null)
     {
         $configurations = [
-            'marketplace' => $marketplace,
             'gateway' => 'bling',
             'base_url' => 'https://bling.com.br/Api/v2',
             'auth' => [
-                'on_behalf_of' => $vendedor,
                 'token' => $token
             ],
             'configurations' => [
@@ -42,7 +40,7 @@ class Config
             ],
             'guzzle' => [
                 'base_uri' => 'https://bling.com.br/Api/v2',
-                'timeout' => 10,
+                'timeout' => 30,
                 'headers' => [
                     'User-Agent' => 'EunaRede/1.0'
                 ],

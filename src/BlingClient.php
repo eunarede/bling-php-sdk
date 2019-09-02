@@ -10,7 +10,7 @@ use Bling\Bling;
  * Os bundles (classes que podem ser chamadas seus metodos publicos por esta classe cliente)
  * são registrados dentra da classe abstrata extendida pelo cliente Blig\Bling
  */
-class BlingClient extends Zoop
+class BlingClient extends Bling
 {
 
   function __construct($configurations)
