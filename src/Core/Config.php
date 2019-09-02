@@ -12,7 +12,7 @@ namespace Bling\Core;
  * @method Bling/Core/Config::configure(string $token, string $marketplace, string $vendedor)
  *
  * @package Bling/Core
- * @author italodeveloper <italoaraujo788@gmail.com>
+ * @author Andre Bellafronte <andre@eunarede.com>
  * @version 1.0.0
  */
 class Config

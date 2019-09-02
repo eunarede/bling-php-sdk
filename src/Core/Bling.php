@@ -36,14 +36,9 @@ abstract class Bling
      */
     private function getBundles()
     {
-        // return [
-        //     Marketplace\Transactions::class,
-        //     MarketPlace\Sellers::class,
-        //     WebHook\WebHook::class,
-        //     MarketPlace\Buyers::class,
-        //     Payment\CreditCard::class,
-        //     Payment\Ticket::class
-        // ];
+        return [
+            Contato\Contatos::class
+        ];
     }
 
     /**
