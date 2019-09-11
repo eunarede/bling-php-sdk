@@ -20,7 +20,7 @@ abstract class Bling
     /** @var $namespace */
     private $namespace;
 
-    public function __construct(array $configurations)
+    public function __construct($configurations)
     {
         $this->configurations = $configurations;
         $this->namespace = __NAMESPACE__ . '\\';
