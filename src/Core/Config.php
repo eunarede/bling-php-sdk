@@ -52,7 +52,7 @@ class Config
         return self::ClientHelper($configurations, $is_zend);
     }
 
-    private static function ClientHelper(array $configurations, $is_zend = null)
+    private static function ClientHelper($configurations, $is_zend = null)
     {
         $client = $configurations['guzzle'];
         unset($configurations['guzzle']);

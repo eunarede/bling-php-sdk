@@ -14,7 +14,7 @@ use Bling\Bling;
  */
 class Contatos extends Bling
 {
-    public function __construct(array $configurations)
+    public function __construct($configurations)
     {
         parent::__construct($configurations);
     }
